@@ -8,6 +8,7 @@ public class basicEnemy : MonoBehaviour {
 	public Transform player;
 	Rigidbody2D enemyBod;
 	void Start () {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 		enemyBod = GetComponent<Rigidbody2D>();
 	}
 	
