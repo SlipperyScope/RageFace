@@ -9,6 +9,5 @@ public class CamFollowPlayer : MonoBehaviour {
 	public void Update()
 	{
 	   transform.position = playerLocation.position + new Vector3(0,0,-distanceFromPlayer);
-		Debug.Log("Camera: " + transform.position.ToString());
 	}
 }
