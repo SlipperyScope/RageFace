@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
 		transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
 		playerBod.angularVelocity = 0;
 
-		playerBod.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
+		//playerBod.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
+		playerBod.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed),ForceMode2D.Impulse);
 	}
 }
