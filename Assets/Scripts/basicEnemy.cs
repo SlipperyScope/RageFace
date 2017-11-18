@@ -6,6 +6,7 @@ public class basicEnemy : MonoBehaviour {
 
 	public float speed = 80;	
 	public Transform player;
+    private float health = 10;
 	Rigidbody2D enemyBod;
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -19,5 +20,15 @@ public class basicEnemy : MonoBehaviour {
 
 		transform.eulerAngles = new Vector3(0, 0, z);
 		enemyBod.AddForce(gameObject.transform.up * speed);
+
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
 	}
+
+    void TakeDamage(float damageAmount)
+    {
+        health -= damageAmount;
+    }
 }
