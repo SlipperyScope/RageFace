@@ -13,7 +13,10 @@ public class BarScript : MonoBehaviour {
 
 	[SerializeField]
 	private Image healthBar;
+	[SerializeField]
+	private Text comboScore;
 
+	private int combo;
 	public float maxPlayerHealthValue { get; set; }
 
 	public float Value
@@ -21,6 +24,30 @@ public class BarScript : MonoBehaviour {
 		set
 		{
 			fillAmount = mapPlayersHealthToTheHealthBar(value,0,maxPlayerHealthValue,0,1);
+
+			if(value<=100 && value >67)
+			{
+				combo = 1;
+			}
+			else if(value <= 67  && value > 33)
+			{
+				combo = 2;
+			}
+			else if(value <= 33  && value > 15)
+			{
+				combo = 3;
+			}
+			else if(value <= 15  && value > 5)
+			{
+				combo = 4;
+			}
+			else if(value <= 5)
+			{
+				combo = 5;
+			}
+
+
+			comboScore.text =""+combo+"X!!";
 		}
 	}
 
