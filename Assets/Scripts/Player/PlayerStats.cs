@@ -8,9 +8,12 @@ public class PlayerStats : MonoBehaviour {
 	private Stat health;
 
     public float coolDownTime;
-	[SerializeField]
 
+	[SerializeField]
 	private float playerScore;
+
+	[SerializeField]
+	private int playerNumKills;
 
 	public int comboMultiplier = 1;
 
@@ -79,11 +82,27 @@ public class PlayerStats : MonoBehaviour {
 		}
 	}
 
+    public int getKillCount
+    {
+        get
+        {
+            return playerNumKills;
+        }
+    }
+
 	public void addToPlayerScore(float scoreIncrease)
 	{
 		if(health.CurrentVal > 0)
 		{
 		playerScore += scoreIncrease * comboMultiplier;
+		}
+	}
+
+	public void incrementPlayerNumKills()
+	{
+		if(health.CurrentVal > 0)
+		{
+            playerNumKills++;
 		}
 	}
 
