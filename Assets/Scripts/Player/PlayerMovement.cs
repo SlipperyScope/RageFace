@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float speed;
 	Rigidbody2D playerBod;
     PlayerStats stats;
+    bool cooling = false;
 	void Start() {
 		playerBod = GetComponent<Rigidbody2D>();
         stats = GetComponent<PlayerStats>();
@@ -38,12 +39,19 @@ public class PlayerMovement : MonoBehaviour {
             col.gameObject.SetActive(false);
         }
     }
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionStay2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Sloth"))
+        if (!cooling && (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Sloth")))
         {
+            cooling = true;
             int damage = col.gameObject.GetComponent<parentEnemy>().damage;
             stats.getHurt(damage);
+            Invoke("stopCooling", stats.coolDownTime);
         }
+    }
+
+    private void stopCooling()
+    {
+        cooling = false;
     }
 }

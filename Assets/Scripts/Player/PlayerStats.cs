@@ -6,6 +6,8 @@ public class PlayerStats : MonoBehaviour {
 	[SerializeField]
 	private Stat health;
 
+    public float coolDownTime;
+
 
 	// Use this for initialization
 	private void Awake()
