@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour {
     }
     private void OnCollisionStay2D(Collision2D col)
     {
-        if (!cooling && (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Sloth")))
+        if (!cooling && (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Sloth") || col.gameObject.CompareTag("Glutton")))
         {
             cooling = true;
             int damage = col.gameObject.GetComponent<parentEnemy>().damage;
