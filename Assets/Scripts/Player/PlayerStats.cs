@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour {
 
     public float coolDownTime;
 
+    [SerializeField]
 	private float playerScore;
 
 

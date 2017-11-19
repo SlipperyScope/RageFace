@@ -9,8 +9,8 @@ public class auraChecking : MonoBehaviour {
 	void Start () {
 	
 	}
-    private void OnCollisionStay2D(Collision2D col)
-    {
-        Debug.Log("HIT!!!!");
-    }
+ //   private void OnCollisionStay2D(Collision2D col)
+ //   {
+ //       Debug.Log("HIT!!!!");
+ //   }
 }

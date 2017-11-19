@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Sloth
   - Glutton
+  - Aura
   layers:
   - Default
   - TransparentFX
