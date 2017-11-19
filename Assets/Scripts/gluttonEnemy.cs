@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class gluttonEnemy : parentEnemy {
     public float speed;
-    public float health;
     Rigidbody2D enemyBod;
 
     void Start () {
@@ -46,11 +45,6 @@ public class gluttonEnemy : parentEnemy {
             TakeHeals(10);
             col.gameObject.SetActive(false);
         }
-    }
-
-    void TakeDamage(float damageAmount)
-    {
-        health -= damageAmount;
     }
 
     void TakeHeals(float healsAmount)

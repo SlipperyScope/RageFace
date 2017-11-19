@@ -6,7 +6,7 @@ public class basicEnemy : parentEnemy {
 
 	public float speed = 80;	
 	public Transform player;
-    public float health = 10;
+
 	Rigidbody2D enemyBod;
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -26,9 +26,4 @@ public class basicEnemy : parentEnemy {
             gameObject.SetActive(false);
         }
 	}
-
-    void TakeDamage(float damageAmount)
-    {
-        health -= damageAmount;
-    }
 }

@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  score: 1
   speed: 10
   player: {fileID: 0}
 --- !u!212 &212463530409498410

@@ -37,3 +37,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 RageFace.app
+/Assets/Plugins.meta

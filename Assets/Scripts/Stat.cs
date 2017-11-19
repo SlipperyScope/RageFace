@@ -26,7 +26,7 @@ public class Stat {
 		}
 
 	}
-
+	
 	public float MaxVal
 	{
 		get

@@ -264,8 +264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057abeb9303e1264680e5d884e074d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aura_1: {fileID: 0}
-  aura_2: {fileID: 0}
 --- !u!4 &270323350 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4591279617333744, guid: ec8cbab5b906c764c88055bee23fb1c5,
@@ -286,6 +284,7 @@ MonoBehaviour:
     bar: {fileID: 274323755}
     maxVal: 100
     currentVal: 100
+  coolDownTime: 0
 --- !u!114 &274323755 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114441018774108192, guid: 08ae273c844a0fb45adfe78bd2aec1e6,
