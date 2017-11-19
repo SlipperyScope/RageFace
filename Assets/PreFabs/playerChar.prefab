@@ -21,9 +21,11 @@ GameObject:
   - component: {fileID: 4841031002118628}
   - component: {fileID: 212464323178137230}
   - component: {fileID: 50011750328618768}
+  - component: {fileID: 58052444189417904}
+  - component: {fileID: 114341764957924426}
   m_Layer: 0
   m_Name: Aura_0
-  m_TagString: Untagged
+  m_TagString: Aura
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,9 +40,11 @@ GameObject:
   - component: {fileID: 4913410947156828}
   - component: {fileID: 212769797453016790}
   - component: {fileID: 50430815338218938}
+  - component: {fileID: 58140688233811562}
+  - component: {fileID: 114426334944016596}
   m_Layer: 0
   m_Name: Aura_2
-  m_TagString: Untagged
+  m_TagString: Aura
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,9 +75,11 @@ GameObject:
   - component: {fileID: 4172441388000056}
   - component: {fileID: 212072742106285972}
   - component: {fileID: 50670788623068242}
+  - component: {fileID: 58074588222798750}
+  - component: {fileID: 114768948948745756}
   m_Layer: 0
   m_Name: Aura_1
-  m_TagString: Untagged
+  m_TagString: Aura
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,6 +285,51 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!58 &58052444189417904
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1018899083325832}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.4
+--- !u!58 &58074588222798750
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854422640100168}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.46
+--- !u!58 &58140688233811562
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358547264714770}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 4.45
 --- !u!58 &58541026061606928
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -336,8 +387,8 @@ MonoBehaviour:
   health:
     bar: {fileID: 0}
     maxVal: 100
-    currentVal: 20
-  coolDownTime: 0.25
+    currentVal: 100
+  coolDownTime: 0.15
 --- !u!114 &114299429256149160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -350,6 +401,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+--- !u!114 &114341764957924426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1018899083325832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0efdb1a66dc33847bbbd091c86b3753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &114426334944016596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358547264714770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0efdb1a66dc33847bbbd091c86b3753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3
 --- !u!114 &114636933157692448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -361,6 +436,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db522460a6d9462bad8d398b9396954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punchForce: 50
+  punchRange: 10
+--- !u!114 &114768948948745756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854422640100168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0efdb1a66dc33847bbbd091c86b3753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
 --- !u!212 &212072742106285972
 SpriteRenderer:
   m_ObjectHideFlags: 1
