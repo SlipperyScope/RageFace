@@ -113,10 +113,12 @@ public class PlayerStats : MonoBehaviour {
     public void getHurt(int dmgAmount)
     {
         health.CurrentVal -= dmgAmount;
-		ouchAudioSource.PlayOneShot(ouchNoise, 10);
         if (health.CurrentVal <= 0)
         {
             SceneManager.LoadScene("Game_Over");
+        } else
+        {
+		    ouchAudioSource.PlayOneShot(ouchNoise, 5);
         }
     }
     public void getHealed(int healedAmount)
