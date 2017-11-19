@@ -6,7 +6,7 @@ public class basicEnemy : MonoBehaviour {
 
 	public float speed = 80;	
 	public Transform player;
-    private float health = 10;
+    public float health = 10;
 	Rigidbody2D enemyBod;
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").transform;

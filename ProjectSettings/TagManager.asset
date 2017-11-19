@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Map
   - PickUp
+  - Enemy
+  - Sloth
   layers:
   - Default
   - TransparentFX
