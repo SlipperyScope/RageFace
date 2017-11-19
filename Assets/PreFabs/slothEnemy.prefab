@@ -173,6 +173,7 @@ MonoBehaviour:
   damage: 25
   score: 5
   health: 100
+  map: {fileID: 0}
   enemyGetsHurtNoise: {fileID: 8300000, guid: 6a74a17537128374b9ce55c0b1ac511c, type: 3}
   speed: 80
   player: {fileID: 0}
@@ -210,7 +211,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3943a64a9f90347f1b5ee79e49a90d98, type: 3}
   m_Color: {r: 0.4666667, g: 0.30980393, b: 0.054901965, a: 1}
   m_FlipX: 0
