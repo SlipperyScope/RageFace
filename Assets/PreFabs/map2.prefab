@@ -52,6 +52,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4658220265440424}
+  - component: {fileID: 114920147143212394}
   m_Layer: 0
   m_Name: map2
   m_TagString: Map
@@ -180,6 +181,19 @@ EdgeCollider2D:
   - {x: -22.932457, y: 41.56619}
   - {x: -41.147575, y: 40.986473}
   - {x: -40.716602, y: -1.2210078}
+--- !u!114 &114920147143212394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1411807993766992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc0a115c0ce14a13a38548be825269f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 1840824903099586, guid: 29853b714ce624040a87bbef581a791e,
+    type: 2}
 --- !u!212 &212463490936997860
 SpriteRenderer:
   m_ObjectHideFlags: 1
