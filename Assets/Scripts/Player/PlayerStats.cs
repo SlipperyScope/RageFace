@@ -8,7 +8,7 @@ public class PlayerStats : MonoBehaviour {
 
     public float coolDownTime;
 
-	private int playerScore;
+	private float playerScore;
 
 
 	// Use this for initialization
@@ -44,7 +44,7 @@ public class PlayerStats : MonoBehaviour {
 		}
 	}
 
-	public void addToPlayerScore(int scoreIncrease)
+	public void addToPlayerScore(float scoreIncrease)
 	{
 		playerScore += scoreIncrease;
 	}
