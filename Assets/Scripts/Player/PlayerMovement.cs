@@ -29,7 +29,8 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (Input.GetKeyUp(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Destroy(stats.gameObject);
+            SceneManager.LoadScene("Master_Scene");
         }
     }
 
