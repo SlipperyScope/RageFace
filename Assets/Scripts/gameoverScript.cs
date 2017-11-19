@@ -21,5 +21,7 @@ public class gameoverScript : MonoBehaviour {
 	void Update () {
         scoreBoardText.text = "" + (int)score;
         killCountText.text = "" + killCount;
+        if (Input.GetKey("escape"))
+            Application.Quit();
     }
 }
