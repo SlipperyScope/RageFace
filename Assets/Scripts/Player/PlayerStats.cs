@@ -12,12 +12,16 @@ public class PlayerStats : MonoBehaviour {
 	private float playerScore;
 
 	public int comboMultiplier = 1;
-
-
+	private AudioSource ouchAudioSource;
+	public AudioClip ouchNoise;
+	public AudioClip deathSound;
+ 	
 	// Use this for initialization
+	
 	private void Awake()
 	{
 		health.Initialize();
+		ouchAudioSource = GetComponent<AudioSource>();
 	}
 
 	public float getPlayerHealth()
@@ -86,8 +90,9 @@ public class PlayerStats : MonoBehaviour {
 	}
 
     public void getHurt(int dmgAmount)
-    {
-        health.CurrentVal -= dmgAmount;
+    {	
+		health.CurrentVal -= dmgAmount;
+		ouchAudioSource.PlayOneShot(ouchNoise, 10);
     }
     public void getHealed(int healedAmount)
     {
