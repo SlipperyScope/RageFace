@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  score: 1
-  health: 20
+  score: 3
+  health: 25
   speed: 1
 --- !u!212 &212728080842475230
 SpriteRenderer:
