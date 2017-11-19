@@ -263,7 +263,7 @@ Prefab:
     - target: {fileID: 114023367787259374, guid: 39a0870162d7abf4eaf400cd7c00968e,
         type: 2}
       propertyPath: spawnLimit
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114023367787259374, guid: 39a0870162d7abf4eaf400cd7c00968e,
         type: 2}
@@ -284,12 +284,12 @@ Prefab:
     - target: {fileID: 224791947775403220, guid: 08ae273c844a0fb45adfe78bd2aec1e6,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 382
+      value: 433
       objectReference: {fileID: 0}
     - target: {fileID: 224791947775403220, guid: 08ae273c844a0fb45adfe78bd2aec1e6,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 211
+      value: 216
       objectReference: {fileID: 0}
     - target: {fileID: 224791947775403220, guid: 08ae273c844a0fb45adfe78bd2aec1e6,
         type: 2}
