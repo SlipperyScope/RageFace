@@ -5,7 +5,7 @@ using UnityEngine;
 public class chargingEnemy : parentEnemy {
     public float speed;
     public Transform player;
-    private float health = 10;
+    public float health = 10;
     private bool isMoving = false;
     Rigidbody2D enemyBod;
 

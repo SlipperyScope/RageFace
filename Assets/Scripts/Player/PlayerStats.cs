@@ -8,11 +8,15 @@ public class PlayerStats : MonoBehaviour {
 
     public float coolDownTime;
 
-
 	// Use this for initialization
 	private void Awake()
 	{
 		health.Initialize();
+	}
+
+	public float getPlayerHealth()
+	{
+		return health.CurrentVal;
 	}
 	
 	// Update is called once per frame
