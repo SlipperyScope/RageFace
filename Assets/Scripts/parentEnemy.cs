@@ -8,7 +8,7 @@ public class parentEnemy : MonoBehaviour {
     public float health;
 
     private bool isCooling = false;
-    private float coolDownTime = .15f;
+    private float coolDownTime = .12f;
     private PlayerStats stats;
 
     public void TakeDamage(float damageAmount)

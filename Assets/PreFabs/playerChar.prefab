@@ -236,7 +236,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 4
   m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -388,7 +388,8 @@ MonoBehaviour:
     bar: {fileID: 0}
     maxVal: 100
     currentVal: 100
-  coolDownTime: 0.15
+  coolDownTime: 0.12
+  playerScore: 0
 --- !u!114 &114299429256149160
 MonoBehaviour:
   m_ObjectHideFlags: 1
