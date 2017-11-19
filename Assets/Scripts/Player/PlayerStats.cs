@@ -98,7 +98,7 @@ public class PlayerStats : MonoBehaviour {
 	{
 		if(health.CurrentVal > 0)
 		{
-		playerScore += scoreIncrease * comboMultiplier;
+		    playerScore += scoreIncrease * comboMultiplier;
 		}
 	}
 
@@ -124,5 +124,17 @@ public class PlayerStats : MonoBehaviour {
     public void getHealed(int healedAmount)
     {
         health.CurrentVal += healedAmount;
+    }
+
+    public void losePoints(float pointLoss)
+    {
+        if (playerScore - pointLoss >= 0)
+        {
+            playerScore -= pointLoss;
+        }
+        else
+        {
+            playerScore = 0;
+        }
     }
 }
