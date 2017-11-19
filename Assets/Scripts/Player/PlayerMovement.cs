@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-	public float speed = 30;
+	public float speed;
 	Rigidbody2D playerBod;
 	void Start() {
 		playerBod = GetComponent<Rigidbody2D>();
@@ -20,4 +20,10 @@ public class PlayerMovement : MonoBehaviour {
 		//playerBod.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
 		playerBod.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed),ForceMode2D.Impulse);
 	}
+
+    private void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.CompareTag("PickUp")) {
+            col.gameObject.SetActive(false);
+        }
+    }
 }
