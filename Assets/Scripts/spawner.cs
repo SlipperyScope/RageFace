@@ -26,7 +26,10 @@ public class spawner : MonoBehaviour {
     void Spawn () {
         if (spawnLimit == 0 || GameObject.FindGameObjectsWithTag(objectToSpawn.tag).Length < spawnLimit) {
             var enemy = Instantiate(objectToSpawn, new Vector3(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange), 0), new Quaternion()).GetComponent<parentEnemy>();
-            enemy.map = map.transform;
+            if (enemy)
+            {
+                enemy.map = map.transform;
+            }
         }
     }
 }

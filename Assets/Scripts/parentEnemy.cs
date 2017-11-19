@@ -23,6 +23,7 @@ public class parentEnemy : MonoBehaviour {
 
             stats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
             stats.addToPlayerScore(score);
+            stats.incrementPlayerNumKills();
             gameObject.SetActive(false);
         }
     }
