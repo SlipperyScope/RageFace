@@ -198,11 +198,6 @@ Prefab:
       propertyPath: playerLocation
       value: 
       objectReference: {fileID: 1652496295}
-    - target: {fileID: 20568384329923100, guid: 944bd453e4ee9044ebcc93b199227754,
-        type: 2}
-      propertyPath: orthographic size
-      value: 9.89272
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 944bd453e4ee9044ebcc93b199227754, type: 2}
   m_IsPrefabParent: 0
@@ -623,6 +618,17 @@ Prefab:
     - target: {fileID: 1097954226317540, guid: 39a0870162d7abf4eaf400cd7c00968e, type: 2}
       propertyPath: m_Name
       value: basicEnemySpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 114023367787259374, guid: 39a0870162d7abf4eaf400cd7c00968e,
+        type: 2}
+      propertyPath: objectToSpawn
+      value: 
+      objectReference: {fileID: 1943475571317670, guid: b4d76096f85767d4a89190bc17b9ffd0,
+        type: 2}
+    - target: {fileID: 114023367787259374, guid: 39a0870162d7abf4eaf400cd7c00968e,
+        type: 2}
+      propertyPath: spawnTime
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 39a0870162d7abf4eaf400cd7c00968e, type: 2}
