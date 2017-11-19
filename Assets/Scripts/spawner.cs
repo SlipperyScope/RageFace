@@ -13,8 +13,12 @@ public class spawner : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         map = GameObject.FindGameObjectWithTag("Map");
-        xRange = (map.GetComponent<Renderer>().bounds.size.x / 2) - 10;
-        yRange = (map.GetComponent<Renderer>().bounds.size.y / 2) - 10;
+        var renderer = map.GetComponent<Renderer>();
+        if (!renderer) {
+            renderer = map.transform.Find("Background").GetComponent<Renderer>();
+        }
+        xRange = (renderer.bounds.size.x / 2) - 10;
+        yRange = (renderer.bounds.size.y / 2) - 10;
 
         InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
