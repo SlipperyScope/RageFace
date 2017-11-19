@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour {
 	[SerializeField]
@@ -17,6 +18,7 @@ public class PlayerStats : MonoBehaviour {
 	// Use this for initialization
 	private void Awake()
 	{
+        DontDestroyOnLoad(this);
 		health.Initialize();
 	}
 
@@ -88,6 +90,10 @@ public class PlayerStats : MonoBehaviour {
     public void getHurt(int dmgAmount)
     {
         health.CurrentVal -= dmgAmount;
+        if (health.CurrentVal <= 0)
+        {
+            SceneManager.LoadScene("Game_Over");
+        }
     }
     public void getHealed(int healedAmount)
     {
