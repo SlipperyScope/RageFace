@@ -540,11 +540,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1975377740983654, guid: ec8cbab5b906c764c88055bee23fb1c5, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 114073735577660388, guid: ec8cbab5b906c764c88055bee23fb1c5,
+    - target: {fileID: 114289937923491952, guid: ec8cbab5b906c764c88055bee23fb1c5,
         type: 2}
       propertyPath: health.bar
       value: 
