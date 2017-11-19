@@ -49,10 +49,18 @@ public class PlayerMovement : MonoBehaviour {
             stats.getHurt(damage);
             Invoke("stopCooling", stats.coolDownTime);
         }
-        else if(!cooling && col.gameObject.CompareTag("Greed")) {
+        else if (!cooling && col.gameObject.CompareTag("Greed"))
+        {
             cooling = true;
             int pointLoss = col.gameObject.GetComponent<parentEnemy>().damage;
             stats.losePoints(pointLoss);
+            Invoke("stopCooling", stats.coolDownTime);
+        }
+        else if (!cooling && col.gameObject.CompareTag("Lust"))
+        {
+            cooling = true;
+            int healthGain = col.gameObject.GetComponent<parentEnemy>().damage;
+            stats.getHealed(healthGain);
             Invoke("stopCooling", stats.coolDownTime);
         }
     }
