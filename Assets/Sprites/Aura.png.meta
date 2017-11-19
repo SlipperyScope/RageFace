@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5a9e17b8b134b415f90d38f8f2edf831
-timeCreated: 1511030418
+timeCreated: 1511066428
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -84,10 +84,10 @@ TextureImporter:
       name: Aura_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 225
-        width: 318
-        height: 316
+        x: 0
+        y: 223
+        width: 330
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -98,10 +98,10 @@ TextureImporter:
       name: Aura_1
       rect:
         serializedVersion: 2
-        x: 321
-        y: 93
-        width: 534
-        height: 586
+        x: 330
+        y: 125
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,9 +112,9 @@ TextureImporter:
       name: Aura_2
       rect:
         serializedVersion: 2
-        x: 878
+        x: 894
         y: 0
-        width: 779
+        width: 750
         height: 750
       alignment: 0
       pivot: {x: 0, y: 0}

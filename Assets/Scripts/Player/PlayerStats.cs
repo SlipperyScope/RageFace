@@ -12,6 +12,11 @@ public class PlayerStats : MonoBehaviour {
 	{
 		health.Initialize();
 	}
+
+	public float getPlayerHealth()
+	{
+		return health.CurrentVal;
+	}
 	
 	// Update is called once per frame
 	void Update () 
