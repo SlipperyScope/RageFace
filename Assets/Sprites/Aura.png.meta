@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5a9e17b8b134b415f90d38f8f2edf831
-timeCreated: 1511066428
+timeCreated: 1511082655
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -85,11 +85,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 223
+        y: 321
         width: 330
-        height: 314
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 327
+      alignment: 9
+      pivot: {x: 0.49311608, y: 0.47829568}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -99,11 +99,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 330
-        y: 125
+        y: 205
         width: 500
-        height: 500
+        height: 550
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -112,12 +112,12 @@ TextureImporter:
       name: Aura_2
       rect:
         serializedVersion: 2
-        x: 894
-        y: 0
-        width: 750
-        height: 750
+        x: 826
+        y: 27
+        width: 873
+        height: 919
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
