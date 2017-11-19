@@ -334,10 +334,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health:
-    bar: {fileID: 114441018774108192, guid: 08ae273c844a0fb45adfe78bd2aec1e6, type: 2}
+    bar: {fileID: 0}
     maxVal: 100
     currentVal: 20
-  coolDownTime: 0
+  coolDownTime: 0.25
 --- !u!114 &114299429256149160
 MonoBehaviour:
   m_ObjectHideFlags: 1

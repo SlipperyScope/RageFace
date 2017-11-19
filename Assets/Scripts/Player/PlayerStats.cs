@@ -8,6 +8,9 @@ public class PlayerStats : MonoBehaviour {
 
     public float coolDownTime;
 
+	private float playerScore;
+
+
 	// Use this for initialization
 	private void Awake()
 	{
@@ -30,6 +33,20 @@ public class PlayerStats : MonoBehaviour {
 		{
 			health.CurrentVal+=10;
 		}
+	}
+
+
+	public float getScore
+	{
+		get
+		{
+			return playerScore;
+		}
+	}
+
+	public void addToPlayerScore(float scoreIncrease)
+	{
+		playerScore += scoreIncrease;
 	}
 
     public void getHurt(int dmgAmount)
