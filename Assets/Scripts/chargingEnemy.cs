@@ -27,12 +27,6 @@ public class chargingEnemy : parentEnemy {
 
             transform.eulerAngles = new Vector3(0, 0, z);
         }
-
-
-        if (health <= 0)
-        {
-            gameObject.SetActive(false);
-        }
     }
 
     void startMove()

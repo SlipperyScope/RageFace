@@ -29,10 +29,5 @@ public class basicEnemy : parentEnemy {
 
 		transform.eulerAngles = new Vector3(0, 0, z);
 		enemyBod.AddForce(gameObject.transform.up * speed);
-
-        if (health <= 0)
-        {
-            gameObject.SetActive(false);
-        }
 	}
 }

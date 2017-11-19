@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 795822812}
   - component: {fileID: 795822811}
   - component: {fileID: 795822810}
+  - component: {fileID: 795822814}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -475,8 +476,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 795822809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 428.5, y: 246.5, z: 0}
-  m_LocalScale: {x: 1.07125, y: 1.07125, z: 1.07125}
+  m_LocalPosition: {x: 433, y: 216, z: 0}
+  m_LocalScale: {x: 1.0825, y: 1.0825, z: 1.0825}
   m_Children:
   - {fileID: 316932950}
   - {fileID: 1992583590}
@@ -492,6 +493,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &795822814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 795822809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c59625f20358eb9428e7279e2a7d61bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreBoardText: {fileID: 949722885}
+  killCountText: {fileID: 974699593}
+  score: 0
+  killCount: 0
 --- !u!1 &949722882
 GameObject:
   m_ObjectHideFlags: 0

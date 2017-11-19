@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour {
 	[SerializeField]
 	private Stat health;
 
     public float coolDownTime;
-	[SerializeField]
 
+	[SerializeField]
 	private float playerScore;
+
+	[SerializeField]
+	private int playerNumKills;
 
 	public int comboMultiplier = 1;
 	private AudioSource ouchAudioSource;
@@ -20,6 +24,7 @@ public class PlayerStats : MonoBehaviour {
 	
 	private void Awake()
 	{
+        DontDestroyOnLoad(this);
 		health.Initialize();
 		ouchAudioSource = GetComponent<AudioSource>();
 	}
@@ -81,6 +86,14 @@ public class PlayerStats : MonoBehaviour {
 		}
 	}
 
+    public int getKillCount
+    {
+        get
+        {
+            return playerNumKills;
+        }
+    }
+
 	public void addToPlayerScore(float scoreIncrease)
 	{
 		if(health.CurrentVal > 0)
@@ -89,10 +102,22 @@ public class PlayerStats : MonoBehaviour {
 		}
 	}
 
+	public void incrementPlayerNumKills()
+	{
+		if(health.CurrentVal > 0)
+		{
+            playerNumKills++;
+		}
+	}
+
     public void getHurt(int dmgAmount)
-    {	
-		health.CurrentVal -= dmgAmount;
+    {
+        health.CurrentVal -= dmgAmount;
 		ouchAudioSource.PlayOneShot(ouchNoise, 10);
+        if (health.CurrentVal <= 0)
+        {
+            SceneManager.LoadScene("Game_Over");
+        }
     }
     public void getHealed(int healedAmount)
     {
