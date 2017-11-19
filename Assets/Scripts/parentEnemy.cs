@@ -4,4 +4,5 @@ using UnityEngine;
 
 public class parentEnemy : MonoBehaviour {
     public int damage;
+    public float score;
 }
