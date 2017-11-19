@@ -118,7 +118,7 @@ public class PlayerStats : MonoBehaviour {
             SceneManager.LoadScene("Game_Over");
         } else
         {
-		    ouchAudioSource.PlayOneShot(ouchNoise, 10);
+		    ouchAudioSource.PlayOneShot(ouchNoise, 5);
         }
     }
     public void getHealed(int healedAmount)

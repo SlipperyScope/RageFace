@@ -23,7 +23,7 @@ public class parentEnemy : MonoBehaviour {
     public void TakeDamage(float damageAmount)
     {
         health -= damageAmount;
-        enemyGetsHurtNoiseAudioSource.PlayOneShot(enemyGetsHurtNoise, 50);
+        enemyGetsHurtNoiseAudioSource.PlayOneShot(enemyGetsHurtNoise, 5);
         if(health <= 0)
         {
             if (map) {
