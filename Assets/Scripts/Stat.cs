@@ -11,7 +11,7 @@ public class Stat {
 	private float maxVal;
 	[SerializeField]
 	private float currentVal;
-
+	
 	public float CurrentVal
 	{
 		get

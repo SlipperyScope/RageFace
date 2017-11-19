@@ -13,10 +13,11 @@ public class BarScript : MonoBehaviour {
 
 	[SerializeField]
 	private Image healthBar;
+
 	[SerializeField]
 	private Text comboScore;
-
-	private int combo;
+	[SerializeField]
+	private Text scoreBoardText;
 	public float maxPlayerHealthValue { get; set; }
 
 	public float Value
@@ -24,41 +25,18 @@ public class BarScript : MonoBehaviour {
 		set
 		{
 			fillAmount = mapPlayersHealthToTheHealthBar(value,0,maxPlayerHealthValue,0,1);
-
-			if(value<=100 && value >67)
-			{
-				combo = 1;
-			}
-			else if(value <= 67  && value > 33)
-			{
-				combo = 2;
-			}
-			else if(value <= 33  && value > 15)
-			{
-				combo = 3;
-			}
-			else if(value <= 15  && value > 5)
-			{
-				combo = 4;
-			}
-			else if(value <= 5)
-			{
-				combo = 5;
-			}
-
-
-			comboScore.text =""+combo+"X!!";
 		}
 	}
 
 	// Use this for initialization
-	void Start () {
-		
-	}
+	void Start () {}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		handleBar();
+		comboScore.text = "" +  GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().comboMultiplier +"X";
+		scoreBoardText.text = "" + GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().getScore;
 	}
 
 	private void handleBar()
@@ -67,11 +45,9 @@ public class BarScript : MonoBehaviour {
 		{
 			healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount,fillAmount,Time.deltaTime*lerpSpeed);
 		}
-
 	}
 
-	private float mapPlayersHealthToTheHealthBar(float playersHealth, float minPlayerHealth, float maxPlayerHealth, 
-													float minOutValue, float maxOutValue)
+	private float mapPlayersHealthToTheHealthBar(float playersHealth, float minPlayerHealth, float maxPlayerHealth, float minOutValue, float maxOutValue)
 	{
 		return (playersHealth - minPlayerHealth) * (maxOutValue-minOutValue) / (maxPlayerHealth-minPlayerHealth) + minOutValue;
 	}

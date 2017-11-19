@@ -7,9 +7,11 @@ public class PlayerStats : MonoBehaviour {
 	private Stat health;
 
     public float coolDownTime;
+	[SerializeField]
 
-    [SerializeField]
 	private float playerScore;
+
+	public int comboMultiplier = 1;
 
 
 	// Use this for initialization
@@ -34,8 +36,38 @@ public class PlayerStats : MonoBehaviour {
 		{
 			health.CurrentVal+=10;
 		}
+		getComboMultiplier(health.CurrentVal);
 	}
 
+	public int getComboMultiplier(float  currentHealth)
+	{
+			if(currentHealth<=100 && currentHealth >67)
+			{
+				comboMultiplier = 1;
+				return comboMultiplier;
+			}
+			else if(currentHealth <= 67  && currentHealth > 33)
+			{
+				comboMultiplier = 2;
+				return comboMultiplier;
+			}
+			else if(currentHealth <= 33  && currentHealth > 15)
+			{
+				comboMultiplier = 3;
+				return comboMultiplier;
+			}
+			else if(currentHealth <= 15  && currentHealth > 5)
+			{
+				comboMultiplier = 4;
+				return comboMultiplier;
+			}
+			else if(currentHealth <= 5)
+			{
+				comboMultiplier = 5;
+				return comboMultiplier;
+			}
+			return 0; //Should never reach this point.
+	}
 
 	public float getScore
 	{
@@ -47,7 +79,10 @@ public class PlayerStats : MonoBehaviour {
 
 	public void addToPlayerScore(float scoreIncrease)
 	{
-		playerScore += scoreIncrease;
+		if(health.CurrentVal > 0)
+		{
+		playerScore += scoreIncrease * comboMultiplier;
+		}
 	}
 
     public void getHurt(int dmgAmount)
