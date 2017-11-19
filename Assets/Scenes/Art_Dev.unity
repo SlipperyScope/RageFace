@@ -154,6 +154,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2336a5028fb4c4011a8569029ead3141, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &305554889
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4095138441356214, guid: 29853b714ce624040a87bbef581a791e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095138441356214, guid: 29853b714ce624040a87bbef581a791e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -6.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095138441356214, guid: 29853b714ce624040a87bbef581a791e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095138441356214, guid: 29853b714ce624040a87bbef581a791e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095138441356214, guid: 29853b714ce624040a87bbef581a791e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095138441356214, guid: 29853b714ce624040a87bbef581a791e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095138441356214, guid: 29853b714ce624040a87bbef581a791e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095138441356214, guid: 29853b714ce624040a87bbef581a791e, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 29853b714ce624040a87bbef581a791e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &729426824 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4591279617333744, guid: ec8cbab5b906c764c88055bee23fb1c5,
