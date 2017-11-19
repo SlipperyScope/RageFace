@@ -8,7 +8,6 @@ public class PlayerStats : MonoBehaviour {
 
     public float coolDownTime;
 
-
 	// Use this for initialization
 	private void Awake()
 	{
