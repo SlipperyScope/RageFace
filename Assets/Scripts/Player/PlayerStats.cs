@@ -6,6 +6,8 @@ public class PlayerStats : MonoBehaviour {
 	[SerializeField]
 	private Stat health;
 
+    public float coolDownTime;
+
 
 	// Use this for initialization
 	private void Awake()
@@ -30,4 +32,13 @@ public class PlayerStats : MonoBehaviour {
 			health.CurrentVal+=10;
 		}
 	}
+
+    public void getHurt(int dmgAmount)
+    {
+        health.CurrentVal -= dmgAmount;
+    }
+    public void getHealed(int healedAmount)
+    {
+        health.CurrentVal += healedAmount;
+    }
 }

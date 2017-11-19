@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class basicEnemy : MonoBehaviour {
+public class basicEnemy : parentEnemy {
 
 	public float speed = 80;	
 	public Transform player;

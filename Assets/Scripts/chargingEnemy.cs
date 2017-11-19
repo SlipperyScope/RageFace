@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class chargingEnemy : MonoBehaviour {
+public class chargingEnemy : parentEnemy {
     public float speed;
     public Transform player;
     private float health = 10;
