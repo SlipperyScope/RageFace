@@ -9,16 +9,25 @@ public class PlayerMechanics : MonoBehaviour {
 
 	private Animator anim;
 
+	
+	private AudioSource punchAudioSource;
+	public AudioClip punchNoise;
+
 	// Use this for initialization
 	void Start () {
 		anim = this.GetComponent<Animator>();	
 	}
+
+	void Awake () {
+        punchAudioSource = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0)) {
 			anim.SetTrigger("Punch");
 			this.Punch();
+			punchAudioSource.PlayOneShot(punchNoise,50);
 		}
 	}
 
