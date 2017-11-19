@@ -20,7 +20,7 @@ public class PlayerStats : MonoBehaviour {
 		{
 			health.CurrentVal-=10;
 		}
-		if(Input.GetKeyUp(KeyCode.W))
+		if(Input.GetKeyUp(KeyCode.E))
 		{
 			health.CurrentVal+=10;
 		}
