@@ -48,6 +48,9 @@ public class PlayerStats : MonoBehaviour {
 			health.CurrentVal+=10;
 		}
 		*/
+		if (Input.GetKey("escape"))
+        	Application.Quit();
+
 		getComboMultiplier(health.CurrentVal);
 		
 	}
