@@ -524,6 +524,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchForce: 50
   punchRange: 10
+  mainCamera: {fileID: 0}
+  shakeAmt: 1.5
   punchNoise: {fileID: 8300000, guid: 810da461b8d9aca43b8d5ae5183a4526, type: 3}
 --- !u!114 &114768948948745756
 MonoBehaviour:
