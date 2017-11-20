@@ -38,7 +38,8 @@ public class PlayerStats : MonoBehaviour {
 	void Update () 
 	{	
 		//The following block of code is used for debugging and needs to be disabled when shipped.
-		/*if(Input.GetKeyDown(KeyCode.Q))
+		/* 
+		if(Input.GetKeyDown(KeyCode.Q))
 		{
 			health.CurrentVal-=10;
 		}
@@ -46,8 +47,9 @@ public class PlayerStats : MonoBehaviour {
 		{
 			health.CurrentVal+=10;
 		}
-		getComboMultiplier(health.CurrentVal);
 		*/
+		getComboMultiplier(health.CurrentVal);
+		
 	}
 
 	public int getComboMultiplier(float  currentHealth)
