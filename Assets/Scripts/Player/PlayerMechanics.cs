@@ -6,9 +6,11 @@ public class PlayerMechanics : MonoBehaviour {
 
 	public float punchForce = 50;
 	public float punchRange = 10;
+    public Camera mainCamera;
 
 	private Animator anim;
-
+    public float shakeAmt = 1.5f;
+    private Vector3 originalCameraPosition;
 	
 	private AudioSource punchAudioSource;
 	public AudioClip punchNoise;
@@ -57,5 +59,22 @@ public class PlayerMechanics : MonoBehaviour {
 				);
 			}
 		}
+
+		originalCameraPosition = mainCamera.transform.position;
+        InvokeRepeating("CameraShake", 0, .01f);
+        Invoke("StopShaking", 0.3f);
 	}
+
+    void CameraShake()
+    {
+		float quakeAmtX = Random.value*shakeAmt*2 - shakeAmt;
+		float quakeAmtY = Random.value*shakeAmt*2 - shakeAmt;
+		mainCamera.transform.position += new Vector3(quakeAmtX, quakeAmtY, 0);
+    }
+
+    void StopShaking()
+    {
+        CancelInvoke("CameraShake");
+        // mainCamera.transform.position = originalCameraPosition;
+    }
 }
