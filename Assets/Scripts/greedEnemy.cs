@@ -8,14 +8,11 @@ public class greedEnemy : parentEnemy
     public float speed = 80;
     public Transform player;
 
-    public PlayerStats painIncreases;
-
     Rigidbody2D enemyBod;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         enemyBod = GetComponent<Rigidbody2D>();
-        painIncreases = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
 
 

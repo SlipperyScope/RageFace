@@ -36,8 +36,9 @@ public class PlayerStats : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () 
-	{
-		if(Input.GetKeyDown(KeyCode.Q))
+	{	
+		//The following block of code is used for debugging and needs to be disabled when shipped.
+		/*if(Input.GetKeyDown(KeyCode.Q))
 		{
 			health.CurrentVal-=10;
 		}
@@ -46,6 +47,7 @@ public class PlayerStats : MonoBehaviour {
 			health.CurrentVal+=10;
 		}
 		getComboMultiplier(health.CurrentVal);
+		*/
 	}
 
 	public int getComboMultiplier(float  currentHealth)
